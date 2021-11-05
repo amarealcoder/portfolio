@@ -9,17 +9,23 @@ import logo from '../images/portfolioLogo.png';
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
+    position: 'fixed',
+    top: 0,
+    zIndex: '1000',
     display: 'flex',
-    marginTop: 20,
+    width: '100%',
+    // height: 50,
+    backgroundColor: '#132554',
   },
   dropdown: {
-    marginTop: 40,
+    marginTop: 50,
   },
   logoDiv: {
     flexGrow: 1,
   },
   logo: {
-    width: 100,
+    marginTop: -4,
+    width: 80,
     borderRadius: 50,
   },
 }));
@@ -39,9 +45,7 @@ export default function SimpleMenu() {
   return (
     <Container className={classes.navbar}>
       <div className={classes.logoDiv}>
-        
-          <img className={classes.logo} src={logo} alt='Logo' />
-       
+        <img className={classes.logo} src={logo} alt='Logo' />
       </div>
       <div>
         <Button
@@ -49,7 +53,7 @@ export default function SimpleMenu() {
           aria-haspopup='true'
           onClick={handleClick}
         >
-          <MenuIcon style={{ fontSize: '45px', color: '#ffff' }} />
+          <MenuIcon style={{ fontSize: '45px', color: '#ffff', marginTop: "10px"}} />
         </Button>
         <Menu
           id='simple-menu'
