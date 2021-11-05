@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.css';
-import Navbar from '../Components/Navbar';
 import { Button, Container } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -25,8 +24,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '15px',
     padding: '0.5px',
   },
-  linksContainer: {
-    marginLeft: theme.spacing(33),
+
+  flex: {
+    flexGrow: 1,
   },
   links: {
     color: '#25abe8',
@@ -37,64 +37,65 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   return (
-    <section className='wave-container' id='home'>
-      <Navbar />
-      <Container>
-        <div className='container'>
-          <div className='intro'>
-            <h3 className='name'> Hi, I'm Miracle</h3>
-            <p className='title'>A frontend web developer & technical writer</p>
-            <p className='desc'>
-              I use frontend langauges and frameworks to make beautiful,
-              scalable and responsive websites. Writing
-            </p>
-            <Button
-              variant='contained'
-              style={{
-                backgroundColor: '#25abe8',
-                color: '#ffff',
-                borderRadius: '30px',
-                fontSize: '18px',
-              }}
-            >
-              Hire me
-            </Button>
-            <AppBar
-              position='relative'
-              color='#ffff'
-              className={classes.appBar}
-            >
-              <Toolbar>
-                <div className={classes.linksContainer}>
-                  <a href='https://github.com/amarealcoder' target='blank'>
-                    <GitHubIcon
-                      className={classes.links}
-                      style={{ marginRight: '8px' }}
-                    />
-                  </a>
-                  <a
-                    href='https://www.linkedin.com/in/miracle-ugorji/'
-                    target='blank'
-                  >
-                    <LinkedInIcon className={classes.links} />
-                  </a>
-                  <a href='https://twitter.com/amarealcoder'>
-                    <TwitterIcon className={classes.links} />
-                  </a>
-                </div>
-              </Toolbar>
-            </AppBar>
+    <React.Fragment>
+      <section className='wave-container' id='home'>
+        <Container>
+          <div className='container'>
+            <div className='intro'>
+              <h3 className='name'> Hi, I'm Miracle</h3>
+              <p className='title'>
+                A frontend web developer & technical writer
+              </p>
+              <p className='desc'>
+                I use frontend langauges and frameworks to make beautiful,
+                scalable and responsive websites. Writing
+              </p>
+              <Button
+                variant='contained'
+                style={{
+                  backgroundColor: '#25abe8',
+                  color: '#ffff',
+                  borderRadius: '30px',
+                  fontSize: '18px',
+                }}
+              >
+                Hire me
+              </Button>
+              <AppBar
+                position='relative'
+                color='#ffff'
+                className={classes.appBar}
+              >
+                <Toolbar>
+                  <div className={classes.flex}></div>
+                  <div>
+                    <a href='https://github.com/amarealcoder' target='blank'>
+                      <GitHubIcon className={classes.links} />
+                    </a>
+                    <a
+                      href='https://www.linkedin.com/in/miracle-ugorji/'
+                      target='blank'
+                    >
+                      <LinkedInIcon className={classes.links} />
+                    </a>
+                    <a href='https://twitter.com/amarealcoder'>
+                      <TwitterIcon className={classes.links} />
+                    </a>
+                  </div>
+                </Toolbar>
+              </AppBar>
+            </div>
+            <div>
+              <img
+                className={classes.portfolioImage}
+                src={portfolioImage}
+                alt='Logo'
+              />
+            </div>
           </div>
-          <div>
-            <img
-              className={classes.portfolioImage}
-              src={portfolioImage}
-              alt='Logo'
-            />
-          </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </React.Fragment>
   );
 };
 
