@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar />
       <Home />
-      <Projects />
+      <Projects id='projects' />
     </>
   );
 }
