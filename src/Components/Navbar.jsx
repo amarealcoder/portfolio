@@ -11,10 +11,9 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     position: 'fixed',
     top: 0,
-    zIndex: '1000',
+    zIndex: '100',
     display: 'flex',
     width: '100%',
-    // height: 50,
     backgroundColor: '#132554',
   },
   dropdown: {
@@ -53,7 +52,9 @@ export default function SimpleMenu() {
           aria-haspopup='true'
           onClick={handleClick}
         >
-          <MenuIcon style={{ fontSize: '45px', color: '#ffff', marginTop: "10px"}} />
+          <MenuIcon
+            style={{ fontSize: '45px', color: '#ffff', marginTop: '10px' }}
+          />
         </Button>
         <Menu
           id='simple-menu'
@@ -68,6 +69,9 @@ export default function SimpleMenu() {
           </MenuItem>
           <MenuItem component='a' href='/about'>
             About
+          </MenuItem>
+          <MenuItem component='a' href='/projects'>
+            Projects
           </MenuItem>
           <MenuItem component='a' href='/tech stack'>
             Tech stack

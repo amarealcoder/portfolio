@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { Button, Container } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core';
@@ -8,6 +8,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import portfolioImage from '../images/portfolioImage.jpg';
+import Btn from '../Components/Btn';
 
 const useStyles = makeStyles((theme) => ({
   portfolioImage: {
@@ -23,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '30px',
     marginTop: '15px',
     padding: '0.5px',
+    position: 'relative',
+    zIndex: "-0"
   },
 
   flex: {
@@ -50,22 +53,8 @@ const Home = () => {
                 I use frontend langauges and frameworks to make beautiful,
                 scalable and responsive websites. Writing
               </p>
-              <Button
-                variant='contained'
-                style={{
-                  backgroundColor: '#25abe8',
-                  color: '#ffff',
-                  borderRadius: '30px',
-                  fontSize: '18px',
-                }}
-              >
-                Hire me
-              </Button>
-              <AppBar
-                position='relative'
-                color='#ffff'
-                className={classes.appBar}
-              >
+              <Btn text='Hire me' />
+              <AppBar color='' className={classes.appBar}>
                 <Toolbar>
                   <div className={classes.flex}></div>
                   <div>
