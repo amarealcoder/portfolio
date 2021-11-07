@@ -67,11 +67,11 @@ export default function SimpleMenu() {
           <MenuItem component='a' href='/'>
             Home
           </MenuItem>
-          <MenuItem component='a' href='/about'>
-            About
-          </MenuItem>
           <MenuItem component='a' href='/projects'>
             Projects
+          </MenuItem>
+          <MenuItem component='a' href='/about'>
+            About
           </MenuItem>
           <MenuItem component='a' href='/tech stack'>
             Tech stack
