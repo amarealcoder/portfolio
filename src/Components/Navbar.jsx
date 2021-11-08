@@ -27,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
     width: 80,
     borderRadius: 50,
   },
+  anchor: {
+    textDecoration: 'none',
+    color: '#25abe8',
+  },
+ 
 }));
 
 export default function SimpleMenu() {
@@ -64,14 +69,20 @@ export default function SimpleMenu() {
           onClose={handleClose}
           className={classes.dropdown}
         >
-          <MenuItem component='a' href='/'>
-            Home
+          <MenuItem>
+            <a href='#home' className={classes.anchor}>
+              Home
+            </a>
           </MenuItem>
-          <MenuItem component='a' href='/projects'>
-            Projects
+          <MenuItem>
+            <a href='#projects' className={classes.anchor}>
+              Projects
+            </a>
           </MenuItem>
-          <MenuItem component='a' href='/about'>
-            About
+          <MenuItem>
+            <a href='#about' className={classes.anchor}>
+              About
+            </a>
           </MenuItem>
           <MenuItem component='a' href='/tech stack'>
             Tech stack

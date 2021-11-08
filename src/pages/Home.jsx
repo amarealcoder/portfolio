@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import { Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core';
@@ -13,13 +13,11 @@ import Btn from '../Components/Btn';
 
 const useStyles = makeStyles((theme) => ({
   portfolioImage: {
-    top: -25,
-    left: 10,
-    borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+    borderRadius: '45% 55% 70% 30% / 30% 30% 70% 70%',
     verticalAlign: 'middle',
     width: '100%',
     height: 'auto',
-    maxWidth: '400px',
+    maxWidth: '500px',
   },
   appBar: {
     borderRadius: '30px',
@@ -27,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '0.5px',
     position: 'relative',
     zIndex: '-0',
+    color: '#e9ebf0',
   },
 
   flex: {
@@ -44,14 +43,15 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   return (
-    <Container className='wave-container'>
-      <Grid container className='container'>
+    <Container className='wave-container' id="home">
+      <Grid container spacing={10} className='container'>
         <Grid item xm={12} md={6} className='intro'>
           <h4 className='name'>Miracle Ugorji</h4>
           <p className='title'>A frontend web developer & technical writer</p>
           <p className='desc'>
             I use frontend langauges and frameworks to make beautiful, scalable
-            and responsive websites. Writing
+            and responsive websites. I equally use Markdown skills to write
+            technical documentations.
           </p>
           <Btn
             text='Hire me'

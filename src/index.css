@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Irish+Grover&family=Patrick+Hand&family=Permanent+Marker&display=swap');
 
+html,
 body {
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
-  background-color: #FFF5EE;
+  overflow-x: hidden;
+  background-color: #e9ebf0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -17,9 +18,9 @@ code {
     monospace;
 }
 
-
 .wave-container {
-  height: 90vh;
+  margin-top: 60px;
+  height: 110vh;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     52deg,
@@ -33,23 +34,23 @@ code {
 .wave-container::before {
   content: '';
   width: 100%;
-  height: 168px;
+  height: 190px;
   position: absolute;
   bottom: 0%;
   left: 0;
   background-size: auto;
   background-repeat: repeat no-repeat;
   background-position: 66vw bottom;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23FFF5EE'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23e9ebf0'/></svg>");
 }
 .container {
-  margin-top: 80px;
-  display: flex;
+  margin-top: 100px;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 .intro {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
   width: 40%;
 }
 .name {
@@ -71,6 +72,10 @@ code {
   -webkit-text-fill-color: transparent;
   animation: textclip 1.5s linear infinite;
 }
+.section {
+  margin-top: 120px;
+  /* height: 100vh; */
+}
 
 @keyframes textclip {
   to {
@@ -82,13 +87,27 @@ code {
   font-size: 22px;
 }
 .desc {
-  
   color: #a9a9a9;
   font-size: 18px;
 }
 
 @media (max-width: 850px) {
+  .wave-container {
+    height: 100;
+  }
   .wave-container::before {
-    height: 90px;
+    height: 500px;
+    background-position: 6vw bottom;
+  }
+  .container {
+    margin-top: 35px;
+
+    text-align: center;
+  }
+  .intro {
+    width: 100%;
+  }
+  .section {
+    margin-top: 500px;
   }
 }
