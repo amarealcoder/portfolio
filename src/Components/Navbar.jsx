@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     color: '#25abe8',
   },
- 
 }));
 
 export default function SimpleMenu() {
@@ -84,8 +83,10 @@ export default function SimpleMenu() {
               About
             </a>
           </MenuItem>
-          <MenuItem component='a' href='/tech stack'>
-            Tech stack
+          <MenuItem>
+            <a href='#articles' className={classes.anchor}>
+              Articles
+            </a>
           </MenuItem>
         </Menu>
       </div>
