@@ -34,7 +34,7 @@ code {
 .wave-container::before {
   content: '';
   width: 100%;
-  height: 190px;
+  height: 140px;
   position: absolute;
   bottom: 0%;
   left: 0;
@@ -91,13 +91,13 @@ code {
   font-size: 18px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 906px) {
   .wave-container {
     height: 100;
   }
   .wave-container::before {
-    height: 500px;
-    background-position: 6vw bottom;
+    height: 0;
+    background-position: 66vw bottom;
   }
   .container {
     margin-top: 35px;
@@ -110,4 +110,5 @@ code {
   .section {
     margin-top: 500px;
   }
+ 
 }

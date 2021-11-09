@@ -7,7 +7,7 @@ import Btn from '../Components/Btn';
 
 const useStyles = makeStyles({
   section: {
-    marginTop: '80px',
+    marginTop: '90px',
   },
   typography: {
     color: '#263238',
