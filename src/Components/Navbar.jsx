@@ -88,6 +88,11 @@ export default function SimpleMenu() {
               Articles
             </a>
           </MenuItem>
+          <MenuItem>
+            <a href='#contact' className={classes.anchor}>
+              Contact
+            </a>
+          </MenuItem>
         </Menu>
       </div>
     </Container>

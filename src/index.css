@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: auto;
   background-color: #e9ebf0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,6 +22,7 @@ code {
 .wave-container {
   margin-top: 60px;
   height: 110vh;
+  width: 100%;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     52deg,
@@ -74,7 +76,6 @@ code {
 }
 .section {
   margin-top: 120px;
-  /* height: 100vh; */
 }
 
 @keyframes textclip {
@@ -110,5 +111,4 @@ code {
   .section {
     margin-top: 500px;
   }
- 
 }
