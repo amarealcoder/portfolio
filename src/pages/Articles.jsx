@@ -8,13 +8,13 @@ import reactIcons from '../images/reactIcons.jpg';
 
 const useStyles = makeStyles({
   section: {
-    marginTop: '90px',
+    marginTop: '120px',
   },
 
   typography: {
     color: '#263238',
     textAlign: 'center',
-    paddingBottom: '20px',
+    marginBottom: '60px',
   },
   images: {
     verticalAlign: 'middle',
@@ -23,9 +23,9 @@ const useStyles = makeStyles({
     maxWidth: '500px',
   },
   articles: {
-    marginTop: '90px',
+    marginTop: '75px',
     fontSize: '18px',
-    lineHeight: 2,
+    lineHeight: 1.5,
     color: '#263238',
   },
   icon: {
@@ -34,7 +34,8 @@ const useStyles = makeStyles({
   },
 
   articlesTitles: {
-    marginBottom: 4,
+    marginBottom: 15,
+    lineHeight: 1,
   },
 
   anchor: {

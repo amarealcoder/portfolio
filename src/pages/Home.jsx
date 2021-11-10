@@ -47,10 +47,10 @@ const Home = () => {
       <Grid container spacing={10} className='container'>
         <Grid item xm={12} md={6} className='intro'>
           <h4 className='name'>Miracle Ugorji</h4>
-          <p className='title'>A frontend web developer & technical writer</p>
+          <p className='title'>A Frontend Web Developer & Technical Writer</p>
           <p className='desc'>
-            I use frontend langauges and frameworks to make beautiful, scalable
-            and responsive websites. I equally use Markdown skills to write
+            I use frontend langauges and frameworks to make beautiful,
+            and responsive ui. I equally use Markdown skills to write
             technical documentations.
           </p>
           <Btn

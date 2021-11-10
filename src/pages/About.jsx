@@ -3,16 +3,15 @@ import { CardContent, Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import Btn from '../Components/Btn';
-// import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   section: {
-    marginTop: '90px',
+    marginTop: '120px',
   },
   typography: {
     color: '#263238',
     textAlign: 'center',
-    paddingBottom: '20px',
+    marginBottom: '60px',
   },
   icon: {
     marginLeft: '4px',
@@ -23,10 +22,10 @@ const About = () => {
   const classes = useStyles();
   return (
     <Container className={classes.section} id='about'>
+
       <Typography variant='h4' className={classes.typography}>
         About me
       </Typography>
-
       <Grid container spacing={8} className={classes.decs}>
         <Grid item xm={12} md={6}>
           <CardContent>

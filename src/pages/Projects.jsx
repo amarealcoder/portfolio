@@ -15,7 +15,6 @@ import todoList from '../images/todoList.jpg';
 
 const useStyles = makeStyles((theme) => {
   return {
-    
     grid: {
       display: 'flex',
       justifyContent: 'center',
@@ -27,7 +26,7 @@ const useStyles = makeStyles((theme) => {
     typography: {
       color: '#263238',
       textAlign: 'center',
-      paddingBottom: '20px',
+      marginBottom: '60px',
     },
   };
 });
