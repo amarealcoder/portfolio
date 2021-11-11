@@ -36,7 +36,7 @@ code {
 .wave-container::before {
   content: '';
   width: 100%;
-  height: 140px;
+  height: 146px;
   position: absolute;
   bottom: 0%;
   left: 0;
