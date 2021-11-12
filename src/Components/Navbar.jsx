@@ -5,8 +5,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
-// import logo from '../images/profile.png';
-import logo from '../images/portfolioLogo.png';
+// // import logo from '../images/profile.png';
+// import logo from '../images/portfolioLogo.png';
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -24,9 +24,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   logo: {
-    marginTop: -4,
+    marginTop: 12,
     width: 80,
-    borderRadius: 50,
+    color: '#ffff',
+    fontSize: '25px'
   },
   anchor: {
     textDecoration: 'none',
@@ -49,8 +50,8 @@ export default function SimpleMenu() {
   return (
     <Container className={classes.navbar}>
       <div className={classes.logoDiv}>
-        <img className={classes.logo} src={logo} alt='Logo' />
-        {/* amarealcoder */}
+        {/* <img className={classes.logo} src={logo} alt='Logo' /> */}
+        <h1 className={classes.logo}>amarealcoder</h1>
       </div>
       <div>
         <Button
@@ -59,7 +60,7 @@ export default function SimpleMenu() {
           onClick={handleClick}
         >
           <MenuIcon
-            style={{ fontSize: '45px', color: '#ffff', marginTop: '10px' }}
+            style={{ fontSize: '45px', color: '#ffff' }}
           />
         </Button>
         <Menu
