@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
+// import logo from '../images/profile.png';
 import logo from '../images/portfolioLogo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -49,6 +50,7 @@ export default function SimpleMenu() {
     <Container className={classes.navbar}>
       <div className={classes.logoDiv}>
         <img className={classes.logo} src={logo} alt='Logo' />
+        {/* amarealcoder */}
       </div>
       <div>
         <Button
