@@ -12,13 +12,7 @@ import portfolioImage from '../images/portfolioImage.jpg';
 import Btn from '../Components/Btn';
 
 const useStyles = makeStyles((theme) => ({
-  portfolioImage: {
-    borderRadius: '45% 55% 70% 30% / 30% 30% 70% 70%',
-    verticalAlign: 'middle',
-    width: '100%',
-    height: 'auto',
-    maxWidth: '500px',
-  },
+
   appBar: {
     borderRadius: '30px',
     marginTop: '15px',
@@ -44,7 +38,10 @@ const Home = () => {
   const classes = useStyles();
   return (
     <Container className='wave-container' id='home'>
-      <Grid container spacing={10} className='container'>
+      <Grid container spacing={2} className='container'>
+        {/* <Grid item xm={12} md={6}> */}
+          <img className='mobileImage' src={portfolioImage} alt='Logo' />
+        {/* </Grid> */}
         <Grid item xm={12} md={6} className='intro'>
           <h4 className='name'>Miracle Ugorji</h4>
           <p className='title'>A Frontend Web Developer & Technical Writer</p>
@@ -59,7 +56,7 @@ const Home = () => {
               endIcon={<ChevronRightIcon className={classes.icon} />}
             />
           </a>
-          <AppBar color='#ffffff' className={classes.appBar}>
+          <AppBar color='inherit' className={classes.appBar}>
             <Toolbar>
               <div className={classes.flex}></div>
               <div>
@@ -80,11 +77,7 @@ const Home = () => {
           </AppBar>
         </Grid>
         <Grid item xm={12} md={6}>
-          <img
-            className={classes.portfolioImage}
-            src={portfolioImage}
-            alt='Logo'
-          />
+          <img className='desktopImage' src={portfolioImage} alt='Logo' />
         </Grid>
       </Grid>
     </Container>

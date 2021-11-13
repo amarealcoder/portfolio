@@ -19,12 +19,10 @@ const useStyles = makeStyles((theme) => ({
   typographyAction: {
     color: '#263238',
     fontSize: '20px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    
     textAlign: 'center',
-    width: '60%',
-    paddingLeft: '20%',
+    width: '70%',
+    paddingLeft: '15%',
   },
 
   form: {
@@ -45,12 +43,12 @@ const useStyles = makeStyles((theme) => ({
 const Contact = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.contactContainer} id='contact'>
+    <Container className='section' id='contact'>
       <Typography variant='h4' className={classes.typography}>
         Interested in collaborating? Contact me!
       </Typography>
 
-      <Typography variant='p' className={classes.typographyAction}>
+      <Typography variant='subtitle1' className={classes.typographyAction}>
         If you have an application you are interested in developing, a feature
         that you need built or a project that need coding, I’d love to help you
         with it.

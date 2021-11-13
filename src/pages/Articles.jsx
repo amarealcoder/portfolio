@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 const Articles = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.section} id='articles'>
+    <Container className='section' id='articles'>
       <Typography variant='h4' className={classes.typography}>
         Articles
       </Typography>
@@ -59,7 +59,7 @@ const Articles = () => {
           <Typography variant='h4' className={classes.articlesTitles}>
             What is getDate() in javaScript?
           </Typography>
-          <Typography variant='p'>
+          <Typography variant='subtitle1'>
             The getDate() method is one of the date methods available in
             javaScript. It is used to get the day of the month for the specified
             date.
@@ -78,7 +78,7 @@ const Articles = () => {
           <Typography variant='h4' className={classes.articlesTitles}>
             How to create a dropdown menu with html and css only.
           </Typography>
-          <Typography variant='p'>
+          <Typography variant='subtitle1'>
             A menu is a list of available choices. A dropdown menu is a menu
             that hides its contents by default and only shows its contents when
             it is clicked or hovered on the navbar.
@@ -106,7 +106,7 @@ const Articles = () => {
           <Typography variant='h4' className={classes.articlesTitles}>
             How to use react-icons to install fontawesome in a react app.
           </Typography>
-          <Typography variant='p'>
+          <Typography variant='subtitle1'>
             When you're building a React web application, chances are you are
             going to use icons. Icons are graphical representations of a
             concept, an idea, a file, a program, an app, a business, and so on.
