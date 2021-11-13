@@ -5,9 +5,6 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import Btn from '../Components/Btn';
 
 const useStyles = makeStyles({
-  section: {
-    marginTop: '120px',
-  },
   typography: {
     color: '#263238',
     textAlign: 'center',
@@ -16,13 +13,15 @@ const useStyles = makeStyles({
   icon: {
     marginLeft: '4px',
   },
+  skills: {
+    color: '#263238',
+  },
 });
 
 const About = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.section} id='about'>
-
+    <Container className='section' id='about'>
       <Typography variant='h4' className={classes.typography}>
         About me
       </Typography>
@@ -55,20 +54,34 @@ const About = () => {
 
         <Grid item xm={12} md={6}>
           <CardContent>
-            <Typography variant='h5'>Languages | Frameworks</Typography>
-            <Typography color='textSecondary'>
-              Javascript | React | Redux
+            <Typography className={classes.skills} variant='h5'>
+              Languages | Frameworks
             </Typography>
-            <Typography color='textSecondary'>
-              CSS | SCSS | Bootstrap | Material UI
+            <Typography variant='subtitle1' color='textSecondary'>
+              JavaScript | React | Redux
             </Typography>
-            <Typography color='textSecondary'>Html</Typography>
+            <Typography variant='subtitle1' color='textSecondary'>
+              CSS | Bootstrap | Material UI
+            </Typography>
+            <Typography variant='subtitle1' color='textSecondary'>
+              HTML
+            </Typography>
 
-            <Typography variant='h5'>Skills</Typography>
-            <Typography color='textSecondary'>Pair programming</Typography>
-            <Typography color='textSecondary'>Markdown</Typography>
-            <Typography color='textSecondary'>Git workflow</Typography>
-            <Typography color='textSecondary'>Technical writing</Typography>
+            <Typography className={classes.skills} variant='h5'>
+              Skills
+            </Typography>
+            <Typography variant='subtitle1' color='textSecondary'>
+              Pair programming
+            </Typography>
+            <Typography variant='subtitle1' color='textSecondary'>
+              Markdown
+            </Typography>
+            <Typography variant='subtitle1' color='textSecondary'>
+              Git workflow
+            </Typography>
+            <Typography variant='subtitle1' color='textSecondary'>
+              Technical writing
+            </Typography>
           </CardContent>
         </Grid>
       </Grid>
