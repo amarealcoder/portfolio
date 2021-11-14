@@ -32,11 +32,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px',
     marginBottom: '50px',
   },
-  field: {
-    width: '50%',
-    marginTop: 20,
-    marginBottom: 20,
-  },
 }));
 
 const Contact = () => {
@@ -65,7 +60,8 @@ const Contact = () => {
         method='POST'
       >
         <TextField
-          className={classes.field}
+          className='field'
+          style={{marginBottom: '30px'}}
           id='outlined-basic'
           label='Your full name'
           variant='outlined'
@@ -73,7 +69,8 @@ const Contact = () => {
           required
         />
         <TextField
-          className={classes.field}
+          className='field'
+          style={{marginBottom: '30px'}}
           id='outlined-basic'
           label='Your email'
           variant='outlined'
@@ -81,7 +78,8 @@ const Contact = () => {
           required
         />
         <TextField
-          className={classes.field}
+          className='field'
+          style={{marginBottom: '30px'}}
           id='outlined-basic'
           label='Message'
           variant='outlined'

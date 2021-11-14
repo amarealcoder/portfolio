@@ -85,14 +85,14 @@ code {
   -webkit-text-fill-color: transparent;
   animation: textclip 1.5s linear infinite;
 }
-.section {
-  margin-top: 120px;
-}
 
 @keyframes textclip {
   to {
     background-position: 200% center;
   }
+}
+.section {
+  margin-top: 120px;
 }
 .title {
   color: #00a3dd;
@@ -101,6 +101,12 @@ code {
 .desc {
   color: #a9a9a9;
   font-size: 18px;
+}
+
+.field {
+  width: 50%;
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 @media (max-width: 906px) {
@@ -136,8 +142,12 @@ code {
     width: 100%;
     margin-top: 0px;
   }
-  
+
   .section {
     margin-top: 60px;
+  }
+
+  .field {
+    width: 80%;
   }
 }
