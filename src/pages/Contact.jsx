@@ -16,13 +16,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '60px',
   },
 
-  typographyAction: {
-    fontSize: '20px',
-
-    textAlign: 'center',
-    width: '70%',
-    paddingLeft: '15%',
-  },
+  
 
   form: {
     display: 'flex',
@@ -45,7 +39,7 @@ const Contact = () => {
       <Typography
         variant='subtitle1'
         color='textSecondary'
-        className={classes.typographyAction}
+        className='typographyAction'
       >
         If you have an application you are interested in developing, a feature
         that you need built or a project that need coding, I’d love to help you
