@@ -103,6 +103,12 @@ code {
   font-size: 18px;
 }
 
+.typographyAction {
+  text-align: center;
+  width: 50%;
+  padding-left: 25%;
+}
+
 .field {
   width: 50%;
   margin-top: -20px;
@@ -146,7 +152,11 @@ code {
   .section {
     margin-top: 60px;
   }
-
+  .typographyAction {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+  }
   .field {
     width: 85%;
   }
