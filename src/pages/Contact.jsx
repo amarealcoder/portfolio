@@ -17,9 +17,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   typographyAction: {
-    color: '#263238',
     fontSize: '20px',
-    
+
     textAlign: 'center',
     width: '70%',
     paddingLeft: '15%',
@@ -48,7 +47,11 @@ const Contact = () => {
         Interested in collaborating? Contact me!
       </Typography>
 
-      <Typography variant='subtitle1' className={classes.typographyAction}>
+      <Typography
+        variant='subtitle1'
+        color='textSecondary'
+        className={classes.typographyAction}
+      >
         If you have an application you are interested in developing, a feature
         that you need built or a project that need coding, I’d love to help you
         with it.
