@@ -79,7 +79,7 @@ const Projects = () => {
           />
           <CardActions>
             <a
-              href='https://github.com/amarealcoder/Calculator'
+              href='https://github.com/amarealcoder/Food-Recipe-App'
               target='blank'
               style={{ textDecoration: 'none' }}
             >

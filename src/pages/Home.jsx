@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core';
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '0.5px',
     position: 'relative',
     zIndex: '-0',
-    color: '#e9ebf0',
+    
   },
 
   flex: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   links: {
     color: '#25abe8',
-    marginRight: '8px',
+    marginRight: '15px',
   },
   icon: {
     marginLeft: '4px',
@@ -56,6 +56,9 @@ const Home = () => {
           </a>
           <AppBar color='inherit' className={classes.appBar}>
             <Toolbar>
+              <Typography variant='subtitle1' color='textSecondary'>
+                Check out my socials
+              </Typography>
               <div className={classes.flex}></div>
               <div>
                 <a href='https://github.com/amarealcoder' target='blank'>
