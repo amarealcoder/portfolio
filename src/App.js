@@ -37,10 +37,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px',
     width: '60%',
     marginLeft: '20%',
+    marginBottom: '30px'
   },
-  err: {
-    color: 'red',
-  },
+ 
 }));
 
   const Form_validation = Yup.object().shape({
@@ -55,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 function App(props) {
   const classes = useStyles();
 
-  const [toSend, setToSend] = useState({
+  const [toSend, ] = useState({
     from_name: '',
     to_name: '',
     reply_to: '',
