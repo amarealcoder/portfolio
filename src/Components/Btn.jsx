@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 
-const Btn = ({ text, endIcon }) => {
+const Btn = ({ text, endIcon, onClick}) => {
   return (
     <Button
       variant='contained'
@@ -10,7 +10,9 @@ const Btn = ({ text, endIcon }) => {
         color: '#ffff',
         borderRadius: '30px',
         fontSize: '16px',
+       
       }}
+      onClick={onClick}
     >
       {text} {endIcon}
      

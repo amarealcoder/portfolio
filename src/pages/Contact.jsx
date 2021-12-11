@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Container, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
-// import Btn from '../Components/Btn';
-import axios from 'axios';
+import { send } from 'emailjs-com';
+
 import '../index.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -27,48 +27,53 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Contact = () => {
+const Contact = (props) => {
   const classes = useStyles();
 
-  const [state, setState] = useState({
-    name: '',
-    _replyto: '',
+  
+
+  const [toSend, setToSend] = useState({
+    from_name: '',
+    to_name: '',
+    reply_to: '',
     message: '',
   });
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [message, setMessage] = useState('');
-
+  
   const handleChange = (e) => {
     e.preventDefault();
-    setState((prevState) => ({
+    setToSend((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
+    // setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async () => {
-    try {
-      const res = await axios.post(
-        'https://mailthis.to/ugorjimiracle06@gmail.com',
-        {
-          name: state.name,
-          _replyto: state._replyto,
-          message: state.message,
-        }
-      );
-      console.log(res);
-      console.log('posted');
-    } catch (error) {
-      console.log(error);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    send(
+      'service_3pdj9hn',
+      'template_6phzfvv',
+      toSend,
+      'user_3TV9Y3cVTLPM2m2rwExv4'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
 
-    setState({
-      name: '',
-      _replyto: '',
+    console.log(toSend);
+    
+    setToSend({
+      from_name: '',
+      to_name: '',
+      reply_to: '',
       message: '',
     });
-  };
+   
+   
+  };  
 
   return (
     <Container className='section' id='contact'>
@@ -82,11 +87,16 @@ const Contact = () => {
         className='typographyAction'
       >
         If you have an application you are interested in developing, a feature
-        that you need built or a project that need coding, I’d love to help you
+        that you need built or a project that need coding, I'd love to help you
         with it.
       </Typography>
 
-      <form className={classes.form} noValidate autoComplete='off'>
+      <form
+        onSubmit={handleSubmit}
+        className={classes.form}
+        noValidate
+        autoComplete='off'
+      >
         <TextField
           className='field'
           style={{ marginBottom: '30px' }}
@@ -95,10 +105,24 @@ const Contact = () => {
           variant='outlined'
           color='secondary'
           required
-          name='name'
+          name='from_name'
+          value={toSend.from_name}
           onChange={handleChange}
-          value={state.name}
         />
+
+        <TextField
+          className='field'
+          style={{ marginBottom: '30px' }}
+          id='outlined-basic'
+          label='Reciever`s name'
+          variant='outlined'
+          color='secondary'
+          required
+          name='to_name'
+          value={toSend.to_name}
+          onChange={handleChange}
+        />
+
         <TextField
           className='field'
           style={{ marginBottom: '30px' }}
@@ -107,26 +131,25 @@ const Contact = () => {
           variant='outlined'
           color='secondary'
           required
-          name='_replyto'
+          name='reply_to'
+          value={toSend.reply_to}
           onChange={handleChange}
-          value={state._replyto}
         />
         <TextField
           className='field'
           style={{ marginBottom: '30px' }}
           id='outlined-basic'
-          label='Message'
+          label='Your Message'
           variant='outlined'
           color='secondary'
           multiline
           rows={8}
           required
           name='message'
+          value={toSend.message}
           onChange={handleChange}
-          value={state.message}
         />
-        {/* <Button text='Submit' type='button' onClick={handleSubmit} /> */}
-        {/* <Btn text='Submit' type='button' onClick={handleSubmit} /> */}
+        
 
         <Button
           variant='contained'
@@ -137,26 +160,11 @@ const Contact = () => {
             fontSize: '16px',
           }}
           type='button'
-          onClick={handleSubmit}
+          
         >
           Submit
         </Button>
       </form>
-
-      {/* <form
-        action='https://mailthis.to/ugorjimiracle06@gmail.com'
-        method='POST'
-        // encType='multipart/form-data'
-      >
-        <input type='text' name='name' placeholder='Your name' />
-        <input type='email' name='_replyto' placeholder='Your email' />
-        <textarea
-          name='message'
-          placeholder='Enter your message here'
-        ></textarea>
-
-        <input type='submit' value='Send' />
-      </form> */}
     </Container>
   );
 };
