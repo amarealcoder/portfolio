@@ -65,7 +65,7 @@ function App(props) {
 
 
   const handleSubmit = (values, {resetForm}) => {
-  // e.preventDefault();
+ 
   send(
     process.env.REACT_APP_SERVICE_ID,
     process.env.REACT_APP_TEMPLATE_ID,
@@ -175,7 +175,6 @@ function App(props) {
                 >
                   Submit
                 </Button>
-               {/* <button type='submit'>Submit</button> */}
                 {/* <pre>{JSON.stringify(errors, null, 4)}</pre> */}
               </Form>
             )}
