@@ -6,7 +6,7 @@ import Navbar from './Components/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
-
+import Articles from './pages/Articles';
 
 import {
   Container,
@@ -37,50 +37,45 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px',
     width: '60%',
     marginLeft: '20%',
-    marginBottom: '30px'
+    marginBottom: '30px',
   },
- 
 }));
 
-  const Form_validation = Yup.object().shape({
-    from_name: Yup.string().required('Your name is required'),
-    to_name: Yup.string().required('Reciever`s name is required'),
-    reply_to: Yup.string()
-      .email('Invalid email')
-      .required('Your email is required'),
-    message: Yup.string().required('Please write a message'),
-  });
+const Form_validation = Yup.object().shape({
+  from_name: Yup.string().required('Your name is required'),
+  to_name: Yup.string().required('Reciever`s name is required'),
+  reply_to: Yup.string()
+    .email('Invalid email')
+    .required('Your email is required'),
+  message: Yup.string().required('Please write a message'),
+});
 
 function App(props) {
   const classes = useStyles();
 
-  const [toSend, ] = useState({
+  const [toSend] = useState({
     from_name: '',
     to_name: '',
     reply_to: '',
     message: '',
   });
 
-
-
-  const handleSubmit = (values, {resetForm}) => {
- 
-  send(
-    process.env.REACT_APP_SERVICE_ID,
-    process.env.REACT_APP_TEMPLATE_ID,
-    values,
-    process.env.REACT_APP_USER_ID,
-  )
-    .then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
-    })
-    .catch((err) => {
-      console.log('FAILED...', err);
-    });
+  const handleSubmit = (values, { resetForm }) => {
+    send(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      values,
+      process.env.REACT_APP_USER_ID
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
 
     console.log({ values });
     resetForm({ values: '' });
-    
   };
   return (
     <>
@@ -89,6 +84,7 @@ function App(props) {
         <Home />
         <Projects />
         <About />
+        <Articles />
 
         <Container className='section' id='contact'>
           <Typography variant='h4' className={classes.typography}>
@@ -170,14 +166,11 @@ function App(props) {
                     fontSize: '16px',
                   }}
                   type='submit'
-                
                 >
                   Submit
                 </Button>
-                
               </Form>
             )}
-           
           </Formik>
         </Container>
       </div>
