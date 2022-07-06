@@ -29,11 +29,26 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 12,
     width: 80,
     color: '#ffff',
-    fontSize: '25px',
+    fontSize: '28px',
   },
   anchor: {
     textDecoration: 'none',
     color: '#25abe8',
+    fontSize: '25px',
+  },
+  navContent: {
+    display: 'flex',
+  },
+  dropdownContainer:{
+    '@media (min-width: 912px)':{
+      display: 'none'
+    }
+  },
+  desktopMenu: {
+    display: 'flex',
+    '@media (max-width: 912px)': {
+      display: 'none',
+    },
   },
 }));
 
@@ -51,27 +66,12 @@ export default function SimpleMenu() {
 
   return (
     <Box className={classes.header} component='header'>
-      <Container component='nav' className={classes.navbar} maxWidth='xl'>
-        <div className={classes.logoDiv}>
-          {/* <img className={classes.logo} src={logo} alt='Logo' /> */}
-          <h1 className={classes.logo}>amarealcoder</h1>
-        </div>
-        <div>
-          <Button
-            aria-controls='simple-menu'
-            aria-haspopup='true'
-            onClick={handleClick}
-          >
-            <MenuIcon style={{ fontSize: '45px', color: '#ffff' }} />
-          </Button>
-          <Menu
-            id='simple-menu'
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-            className={classes.dropdown}
-          >
+      <Container component='nav' className={classes.nav} maxWidth='xl'>
+        <div className={classes.navContent}>
+          <div className={classes.logoDiv}>
+            <h1 className={classes.logo}>amarealcoder</h1>
+          </div>
+          <nav className={classes.desktopMenu}>
             <MenuItem>
               <a href='#home' className={classes.anchor}>
                 Home
@@ -97,7 +97,51 @@ export default function SimpleMenu() {
                 Contact
               </a>
             </MenuItem>
-          </Menu>
+          </nav>
+
+          <div className={classes.dropdownContainer}>
+            <Button
+              aria-controls='simple-menu'
+              aria-haspopup='true'
+              onClick={handleClick}
+            >
+              <MenuIcon style={{ fontSize: '45px', color: '#ffff' }} />
+            </Button>
+            <Menu
+              id='simple-menu'
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+              className={classes.dropdown}
+            >
+              <MenuItem>
+                <a href='#home' className={classes.anchor}>
+                  Home
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a href='#projects' className={classes.anchor}>
+                  Projects
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a href='#about' className={classes.anchor}>
+                  About
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a href='#articles' className={classes.anchor}>
+                  Articles
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a href='#contact' className={classes.anchor}>
+                  Contact
+                </a>
+              </MenuItem>
+            </Menu>
+          </div>
         </div>
       </Container>
     </Box>
