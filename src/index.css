@@ -18,8 +18,10 @@ body {
 .desktopImage {
   border-radius: 45% 55% 70% 30% / 30% 30% 70% 70%;
   vertical-align: middle;
-  width: 90%;
+  width: 80%;
   height: auto;
+  position: relative;
+  bottom: 100px;
 }
 .mobileImage {
   display: none;
@@ -127,7 +129,7 @@ body {
   }
 }
 
-@media (max-width: 912px) {
+@media (max-width: 916px) {
   .desktopImage {
     display: none;
   }
@@ -176,8 +178,8 @@ body {
     width: 85%;
   }
 }
-@media (max-width: 320px){
-   .mobileImage {
+@media (max-width: 320px) {
+  .mobileImage {
     margin-top: 50px;
     width: 90%;
   }
@@ -190,7 +192,7 @@ body {
   .desc {
     font-size: 18px;
   }
-  .socials{
+  .socials {
     display: none;
   }
 }
