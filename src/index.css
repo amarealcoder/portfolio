@@ -21,7 +21,7 @@ body {
   width: 80%;
   height: auto;
   position: relative;
-  bottom: 100px;
+  bottom: 20px;
 }
 .mobileImage {
   display: none;
