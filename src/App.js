@@ -91,15 +91,17 @@ function App(props) {
             Interested in collaborating? Contact me!
           </Typography>
 
-          <Typography
-            variant='subtitle1'
-            color='textSecondary'
-            className='typographyAction'
-          >
-            If you have an application you are interested in developing, a
-            feature that you need built or a project that needs coding, I'd love
-            to help you with it.
-          </Typography>
+          <div className='typo-container'>
+            <Typography
+              variant='subtitle1'
+              color='textSecondary'
+              className='typographyAction'
+            >
+              If you have an application you are interested in developing, a
+              feature that you need built or a project that needs coding, I'd
+              love to help you with it.
+            </Typography>
+          </div>
           <Formik
             initialValues={{ ...toSend }}
             validationSchema={Form_validation}
