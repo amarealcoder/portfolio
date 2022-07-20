@@ -14,7 +14,6 @@ import Btn from '../Components/Btn';
 const useStyles = makeStyles((theme) => ({
   appBar: {
     borderRadius: '30px',
-    marginTop: '15px',
     padding: '0.5px',
     position: 'relative',
     zIndex: '-0',
