@@ -14,10 +14,12 @@ import Btn from '../Components/Btn';
 const useStyles = makeStyles((theme) => ({
   appBar: {
     borderRadius: '30px',
-    marginTop: '15px',
     padding: '0.5px',
     position: 'relative',
     zIndex: '-0',
+    maxWidth: '80%',
+    margin: '0 auto',
+    marginTop: '1.5rem'
   },
   flex: {
     flexGrow: 1,
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   socialIcons: {
     '@media(max-width: 320px)': {
-     marginLeft: '80px',
+      marginLeft: '80px',
     },
   },
   links: {
