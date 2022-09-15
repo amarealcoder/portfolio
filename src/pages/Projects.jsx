@@ -73,9 +73,9 @@ const Projects = () => {
 
         <Grid item xm={12} md={6} lg={3}>
           <MediaCard
-            title='E-commerce App'
+            title='Buzzymart'
             image={buzzymart}
-            desc='An e-commerce store. Users can log in, view product detail, filter categories, add to cart and much more.  Made with CSS module, React, Firebase, localstorage.'
+            desc='An e-commerce store. Users can log in and log out, view product detail, filter categories, add to cart and much more.  Made with CSS module, React, Firebase, localstorage.'
           />
           <CardActions>
             <a
