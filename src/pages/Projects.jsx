@@ -9,7 +9,7 @@ import Btn from '../Components/Btn';
 import { makeStyles } from '@material-ui/styles';
 import { Container, Typography } from '@material-ui/core';
 import calculator from '../images/calculator.jpg';
-import foodRecipeApp from '../images/foodRecipeApp.jpg';
+import buzzymart from '../images/buzzymart.png';
 import tipCalculator from '../images/tipCalculator.jpg';
 import todoList from '../images/todoList.jpg';
 
@@ -73,13 +73,13 @@ const Projects = () => {
 
         <Grid item xm={12} md={6} lg={3}>
           <MediaCard
-            title='Food Recipe App'
-            image={foodRecipeApp}
-            desc='A food recipe app where users can search for a recipe of their choice, view recipe contents, check out random recipe displayed and much more. Made with html, css, and javascript.'
+            title='E-commerce App'
+            image={buzzymart}
+            desc='An e-commerce store. Users can log in, view product detail, filter categories, add to cart and much more.  Made with CSS module, React, Firebase, localstorage.'
           />
           <CardActions>
             <a
-              href='https://github.com/amarealcoder/Food-Recipe-App'
+              href='https://github.com/amarealcoder/E-commerce-store'
               target='blank'
               style={{ textDecoration: 'none' }}
             >
@@ -89,7 +89,7 @@ const Projects = () => {
               />
             </a>
             <a
-              href='https://foodies-recipes-app.netlify.app'
+              href='https://buzzymart.netlify.app/'
               target='blank'
               style={{ textDecoration: 'none' }}
             >
